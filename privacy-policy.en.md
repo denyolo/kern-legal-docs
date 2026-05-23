@@ -135,7 +135,7 @@ So you know exactly what happens:
 
 These numbers help us improve the app (e.g., "is the character cap too tight?", "where do users drop off?"). They land in a separate database table `usage_events` that by design has **no text columns for content**. Your user ID is **hashed** with a secret key before saving — we see "Hash-User-abc had 5 reflections", not "Anna had 5 reflections".
 
-Schema publicly visible in our GitHub repo: [supabase/migrations/0005_usage_events.sql](https://github.com/denyolo/kern-app/blob/main/supabase/migrations/0005_usage_events.sql)
+Schema publicly visible in our Legal repo: [migrations/0005_usage_events.sql](https://github.com/denyolo/kern-legal-docs/blob/main/migrations/0005_usage_events.sql) (Repo: [kern-legal-docs](https://github.com/denyolo/kern-legal-docs))
 
 **What we deliberately don't do**:
 

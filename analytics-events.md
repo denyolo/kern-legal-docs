@@ -22,7 +22,7 @@ KERN sammelt **anonyme Nutzungs-Zahlen**, um die App besser zu machen — zum Be
 Alle Metriken landen in **einer separaten Tabelle** namens `usage_events` (Supabase-Postgres). Diese Tabelle hat per Design **keine Text-Spalten für Inhalte** — nur Zahlen und kontrollierte Enums.
 
 Schema (öffentlich im KERN-Repo einsehbar):
-- [`supabase/migrations/0005_usage_events.sql`](https://github.com/denyolo/kern-app/blob/main/supabase/migrations/0005_usage_events.sql)
+- [`migrations/0005_usage_events.sql`](https://github.com/denyolo/kern-legal-docs/blob/main/migrations/0005_usage_events.sql) (im öffentlichen [kern-legal-docs](https://github.com/denyolo/kern-legal-docs) Repo)
 
 **Spalten:**
 

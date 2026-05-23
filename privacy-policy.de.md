@@ -135,7 +135,7 @@ Damit du genau weißt was passiert:
 
 Diese Zahlen helfen uns die App zu verbessern (z.B. "ist der Zeichen-Cap zu eng?", "wo brechen User ab?"). Sie landen in einer separaten Datenbank-Tabelle `usage_events`, die per Design **keine Text-Spalten für Inhalte** hat. Deine User-ID wird vor dem Speichern mit einem geheimen Schlüssel **gehasht** — wir sehen also nicht "Anna hatte 5 Reflexionen", sondern "Hash-User-abc hatte 5 Reflexionen".
 
-Schema einsehbar im öffentlichen GitHub-Repo: [supabase/migrations/0005_usage_events.sql](https://github.com/denyolo/kern-app/blob/main/supabase/migrations/0005_usage_events.sql)
+Schema einsehbar im öffentlichen Legal-Repo: [migrations/0005_usage_events.sql](https://github.com/denyolo/kern-legal-docs/blob/main/migrations/0005_usage_events.sql) (Repo: [kern-legal-docs](https://github.com/denyolo/kern-legal-docs))
 
 **Was wir bewusst nicht tun**:
 
