@@ -121,6 +121,8 @@ If you sign in with Apple Sign-In, Apple handles the login. Apple sees only that
 
 ## 5. What we anonymously measure — and what **not**
 
+> 🔍 **These statements are auditable.** Schema, code-of-conduct and all relevant database migrations live in the public [kern-legal-docs](https://github.com/denyolo/kern-legal-docs) repository — with full version history and commit reasoning. If anything is different from what's described here, you can see it yourself.
+
 So you know exactly what happens:
 
 **What we measure in numbers** (anonymous, no content):

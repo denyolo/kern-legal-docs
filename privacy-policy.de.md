@@ -121,6 +121,8 @@ Wenn du dich mit Apple Sign-In anmeldest, wickelt Apple den Login ab. Apple sieh
 
 ## 5. Was wir anonym messen — und was **nicht**
 
+> 🔍 **Diese Aussagen sind auditierbar.** Schema, Code-of-Conduct und alle relevanten Datenbank-Migrationen liegen im öffentlichen Repo [kern-legal-docs](https://github.com/denyolo/kern-legal-docs) — mit voller Versions-Historie und Commit-Begründungen. Wenn etwas anders ist als hier beschrieben, kannst du das selbst sehen.
+
 Damit du genau weißt was passiert:
 
 **Was wir an Zahlen messen** (anonym, ohne Inhalte):
