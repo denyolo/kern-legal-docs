@@ -78,7 +78,7 @@ Bei aktivem Cloud-Backup verarbeiten wir zusätzlich:
 
 ### d) AI-Antworten (wenn du eine Reflexion machst)
 
-Wenn KERN dir bei einer Reflexion antwortet oder eine Erkenntnis zusammenfasst, wird der Text deiner Reflexion an einen KI-Dienst geschickt. Mehr dazu in Abschnitt 4.
+Wenn KERN dir bei einer Reflexion antwortet oder eine Erkenntnis zusammenfasst, wird der **Text** deiner Reflexion an Anthropic (Hersteller des KI-Modells Claude) geschickt — **ohne deine Identität**. Anthropic erfährt nicht *wer* schreibt, nur *was*. Anthropic trainiert **nicht** auf deinen Inhalten (vertraglich ausgeschlossen) und speichert API-Inputs maximal 30 Tage als Operations-Log, danach Löschung. Die Übertragung läuft TLS-verschlüsselt. Mehr Details in Abschnitt 4.
 
 ## 3. Wofür wir diese Daten nutzen
 

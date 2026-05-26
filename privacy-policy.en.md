@@ -78,7 +78,7 @@ When cloud backup is on, we additionally process:
 
 ### d) AI responses (when you reflect)
 
-When KERN responds to a reflection or summarizes an insight, the text of your reflection is sent to an AI service. More on that in section 4.
+When KERN responds to a reflection or summarizes an insight, the **text** of your reflection is sent to Anthropic (the company behind the Claude AI model) — **without your identity**. Anthropic does not learn *who* writes, only *what*. Anthropic does **not** train on your content (contractually excluded) and stores API inputs for at most 30 days as an operations log, then deletes them. Transmission runs TLS-encrypted. More details in section 4.
 
 ## 3. What we use this data for
 
