@@ -1,6 +1,6 @@
 # Datenschutz
 
-**Stand: 18.05.2026**
+**Stand: 27.05.2026**
 
 KERN ist eine App für innere Arbeit — und hier geht es in erster Linie um persönliche Dinge. Deshalb behandeln wir deine Daten so, wie wir selbst behandelt werden wollen: ehrlich, transparent, mit Respekt.
 

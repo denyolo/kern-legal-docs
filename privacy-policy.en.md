@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated: May 18, 2026**
+**Last updated: May 27, 2026**
 
 KERN is an app for inner work — and this is first and foremost about personal things. So we handle your data the way we'd want ours handled: honest, transparent, with respect.
 
