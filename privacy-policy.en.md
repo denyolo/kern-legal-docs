@@ -2,15 +2,15 @@
 
 **Last updated: May 27, 2026**
 
-KERN is an app for inner work — and this is first and foremost about personal things. So we handle your data the way we'd want ours handled: honest, transparent, with respect.
+KERN is an app for inner work — and this is first and foremost about personal things. So we handle your data the way we'd want ours handled: respectfully.
 
 This policy tells you in plain language what we store, where it goes, and what we deliberately **don't** do.
 
 ---
 
-## Quick read — you're safe
+## Quick read — you're safe here
 
-Before the details, here's in plain language what you may know:
+Before the details, here's in plain language what happens in the background.
 
 - **We don't know who you are.** No name, no email, no phone number.
 - **What you send to the AI goes anonymously.** Anthropic (the company behind the AI) receives the text of your reflection, but no identity that traces back to you.

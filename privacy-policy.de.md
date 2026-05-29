@@ -2,15 +2,15 @@
 
 **Stand: 27.05.2026**
 
-KERN ist eine App für innere Arbeit — und hier geht es in erster Linie um persönliche Dinge. Deshalb behandeln wir deine Daten so, wie wir selbst behandelt werden wollen: ehrlich, transparent, mit Respekt.
+KERN ist eine App für innere Arbeit — und hier geht es in erster Linie um persönliche Dinge. Deshalb behandeln wir deine Daten so, wie wir selbst behandelt werden wollen: respektvoll.
 
 Diese Erklärung sagt dir in einfacher Sprache, was wir speichern, wo das landet, und was wir bewusst **nicht** tun.
 
 ---
 
-## Kurzfassung — du bist safe
+## Kurzfassung — du bist safe hier
 
-Bevor die Details kommen, hier in einfacher Sprache, was du wissen darfst:
+Bevor die Details kommen, hier in einfacher Sprache, was im Hintergrund passiert.
 
 - **Wir wissen nicht, wer du bist.** Kein Name, keine Email, keine Telefonnummer.
 - **Was du der KI schickst, geht anonym.** Anthropic (die Firma hinter der KI) bekommt den Text deiner Reflexion, aber keine Identität, die zu dir zurückführt.
