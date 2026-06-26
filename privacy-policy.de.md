@@ -15,7 +15,7 @@ Bevor die Details kommen, hier in einfacher Sprache, was im Hintergrund passiert
 - **Wir wissen nicht, wer du bist.** Kein Name, keine Email, keine Telefonnummer.
 - **Was du der KI schickst, geht anonym.** Anthropic (die Firma hinter der KI) bekommt den Text deiner Reflexion, aber keine Identität, die zu dir zurückführt.
 - **Deine Inhalte bleiben deine.** Kein Verkauf, kein KI-Training auf deinen Worten, keine Weitergabe an Dritte.
-- **Du wählst, wo deine Daten liegen.** Standard: nur auf deinem iPhone. Optional: verschlüsselt als Backup auf EU-Servern.
+- **Du wählst, wo deine Daten liegen.** Standard: nur auf deinem iPhone. Optional: **Ende-zu-Ende-verschlüsselt** als Backup auf EU-Servern — **nur dein Gerät kann sie lesen, wir nicht.**
 - **Kein Drittanbieter-Tracking, keine Werbe-Analytics, keine Cookies.** Auch Push-Notifications laufen komplett lokal auf deinem iPhone — kein Server schaut mit, auch nicht Apple.
 - **Anonyme Nutzungs-Metriken** (Anzahl Reflexionen, Durchschnitts-Dauer einer Meditation, Zeichen-Anzahl pro Antwort): Diese **Zahlen** sammeln wir, um KERN besser zu machen. **Keine Inhalte** — wir sehen nie, *was* du reflektierst. Details in [Abschnitt 5](#5-was-wir-anonym-messen-und-was-nicht).
 - **Alles löschen geht jederzeit** mit einem Tap in den Einstellungen.
@@ -68,7 +68,7 @@ Damit KERN überhaupt funktionieren kann (z.B. KI-Antworten generieren, Rate-Lim
 
 Im Onboarding wählst du **zusätzlich**, ob KERN deine *Inhalte* (Reflexionen, Erkenntnisse, Vision, Verlauf) auf unseren Servern spiegelt. Diese Wahl kannst du **jederzeit** in den Einstellungen ändern.
 
-- **Cloud-Backup an**: Deine Inhalte werden auf EU-Servern (Frankfurt, Deutschland) gespeichert — sowohl bei der Übertragung (TLS-Verschlüsselung) als auch im Ruhezustand (AES-256) verschlüsselt. **Wichtig zu wissen**: Wir haben dabei im Notfall technischen Zugriff darauf, weil unser Cloud-Anbieter Supabase die Schlüssel hält. Das ist **keine** End-to-End-Verschlüsselung. End-to-End — bei der selbst wir nicht reinschauen können — bauen wir nach der Beta ein. Wenn du dein iPhone verlierst, kommst du wieder rein.
+- **Cloud-Backup an**: Deine Inhalte werden **auf deinem iPhone verschlüsselt, bevor sie unsere Server erreichen** (Ende-zu-Ende, AES-256-GCM); zusätzlich ist die Übertragung TLS-gesichert. Auf den EU-Servern (Frankfurt, Deutschland) liegt damit **nur unlesbarer Chiffretext** — **selbst wir können deine gespeicherten Inhalte nicht lesen**, auch nicht im Notfall, auch wenn wir wollten. Der Schlüssel liegt ausschließlich in deinem **iCloud-Schlüsselbund** (Apple synct ihn Ende-zu-Ende zwischen deinen Geräten); KERN sieht ihn nie. **Eine bewusste Ausnahme**: Wenn du mit der KI reflektierst, geht dein Text einmalig im Klartext durch unseren Server zur KI — dort wird er **verarbeitet, aber nie gespeichert**. Recovery läuft über deinen iCloud-Schlüsselbund: solange der aktiv ist, kommst du auf einem neuen Gerät wieder an deine Inhalte. Ist er aus und dein Gerät weg, sind die verschlüsselten Inhalte nicht wiederherstellbar — das ist der Preis echter Vertraulichkeit.
 - **Nur auf diesem Gerät**: Deine *Inhalte* (Reflexionen, Erkenntnisse, Verlauf, Vision) verlassen dein iPhone nicht. Nur die anonyme User-UUID aus Abschnitt b) existiert weiter auf unseren Servern. Maximale Privatsphäre für deine Inhalte, aber kein Recovery wenn das Gerät weg ist.
 
 Bei aktivem Cloud-Backup verarbeiten wir zusätzlich:

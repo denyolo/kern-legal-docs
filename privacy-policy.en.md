@@ -15,7 +15,7 @@ Before the details, here's in plain language what happens in the background.
 - **We don't know who you are.** No name, no email, no phone number.
 - **What you send to the AI goes anonymously.** Anthropic (the company behind the AI) receives the text of your reflection, but no identity that traces back to you.
 - **Your content stays yours.** No selling, no AI training on your words, no third-party sharing.
-- **You choose where your data lives.** Default: only on your iPhone. Optional: encrypted as backup on EU servers.
+- **You choose where your data lives.** Default: only on your iPhone. Optional: an **end-to-end encrypted** backup on EU servers — **only your device can read it, not us.**
 - **No third-party tracking, no advertising analytics, no cookies.** Push notifications also run entirely locally on your iPhone — no server watches along, not even Apple.
 - **Anonymous usage metrics** (number of reflections, average meditation duration, character count per answer): We collect these **numbers** to improve KERN. **No content** — we never see *what* you reflect on. Details in [section 5](#5-what-we-anonymously-measure--and-what-not).
 - **Delete everything anytime** with one tap in settings.
@@ -68,7 +68,7 @@ For KERN to work at all (e.g. to generate AI responses, check rate limits), we n
 
 During onboarding you **additionally** choose whether KERN mirrors your *content* (reflections, insights, vision, history) on our servers. You can change this choice **anytime** in settings.
 
-- **Cloud backup on**: Your content is stored on EU servers (Frankfurt, Germany) — encrypted both in transit (TLS) and at rest (AES-256). **Important to know**: We can technically access this data if needed, because our cloud provider Supabase holds the keys. This is **not** end-to-end encryption. End-to-end — where even we cannot look in — is something we're building post-beta. If you lose your iPhone, you can get back in.
+- **Cloud backup on**: Your content is **encrypted on your iPhone before it ever reaches our servers** (end-to-end, AES-256-GCM); transfer is additionally secured via TLS. What's stored on our EU servers (Frankfurt, Germany) is therefore **only unreadable ciphertext** — **even we cannot read your stored content**, not in an emergency, not if we wanted to. The key lives solely in your **iCloud Keychain** (Apple syncs it end-to-end across your devices); KERN never sees it. **One deliberate exception**: when you reflect with the AI, your text passes once, in cleartext, through our server to the AI — where it is **processed but never stored**. Recovery works through your iCloud Keychain: as long as it's on, you regain your content on a new device. If it's off and your device is gone, the encrypted content cannot be recovered — that's the price of true confidentiality.
 - **Only on this device**: Your *content* (reflections, insights, history, vision) doesn't leave your iPhone. Only the anonymous user UUID from section b) continues to exist on our servers. Maximum privacy for your content, but no recovery if you lose the device.
 
 When cloud backup is on, we additionally process:

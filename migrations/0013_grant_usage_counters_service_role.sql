@@ -1,0 +1,22 @@
+-- ============================================================================
+-- KERN — service_role darf usage_counters lesen + schreiben (Tag 40)
+-- ============================================================================
+--
+-- Gleicher Bug wie Migration 0011 (usage_events): usage_counters hat RLS +
+-- nur ein SELECT-GRANT fuer `authenticated`. Der service_role-Client der
+-- mirror-Edge-Function umgeht zwar RLS, braucht aber das table-level GRANT
+-- (separate Postgres-Privileg-Ebene). Ohne diesen GRANT schlug JEDER
+-- Counter-Zugriff (SELECT + UPSERT) still fehl mit:
+--   "permission denied for table usage_counters [42501]"
+--
+-- Folge: das gesamte Rate-Limiting hat seit Tag 1 NIE einen Counter
+-- geschrieben — der Zaehler hing immer bei 0/1. Fiel nie auf, weil in der
+-- Closed Beta alle Aufrufer Premium sind (Limit 50) und niemand das Limit
+-- erreichte. Aufgedeckt durch die Free-Wand (Limit 4, Tag 40).
+--
+-- 🔒 NUR service_role (Server). anon + authenticated behalten ihr reines
+--    SELECT (Quota-Anzeige) — sie duerfen ihren Zaehler weiterhin NICHT
+--    selbst schreiben (Anti-Manipulation, unveraendert).
+-- ============================================================================
+
+GRANT SELECT, INSERT, UPDATE ON public.usage_counters TO service_role;
