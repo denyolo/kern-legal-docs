@@ -1,11 +1,11 @@
 # KERN — Admin Code of Conduct
 
-**Stand: 18.05.2026**
+**Stand: 26.06.2026**
 **Gilt für: Dennis Lisk und alle künftigen KERN-Team-Mitglieder mit technischem Datenzugriff**
 
 ---
 
-Als alleiniger Owner und Verantwortlicher für KERN habe ich technischen Zugriff auf die User-Daten in unserer Supabase-Datenbank (Reflexionen, Erkenntnisse, Onboarding-Antworten, Vision-Texte, Affirmationen, Verlauf).
+**Seit dem 26.06.2026 sind die User-Inhalte (Reflexionen, Erkenntnisse, Onboarding-Antworten, Vision-Texte, Affirmationen, Verlauf) Ende-zu-Ende verschlüsselt — ich kann sie nicht mehr lesen, niemand bei KERN kann das.** Die folgenden Verpflichtungen waren schon davor mein Standard und bleiben es.
 
 Ich verpflichte mich:
 
@@ -67,9 +67,9 @@ Diese Verpflichtung wird durch technische Maßnahmen schrittweise verstärkt:
 
 1. **Heute (Beta, Free-Plan)**: Schriftliche Selbstverpflichtung (dieses Dokument) + `admin_inspect_user_data`-Funktion + `admin_access_log`-Tabelle. **Honor System** — direkter SELECT ist technisch möglich aber durch diese Regel ausgeschlossen.
 2. **Vor Public Launch (Pro-Plan-Upgrade)**: `pgaudit` als technische zweite Verteidigungslinie. Auch direkter SELECT wird geloggt.
-3. **Post-Launch (E2E-Verschlüsselung)**: User-Inhalte werden client-side verschlüsselt. Ab da ist der Audit-Mechanismus weniger kritisch, weil **selbst ein Direct-SELECT nur Zeichensalat liefert** — die Selbstverpflichtung wandelt sich von "ich tue es nicht" zu "ich **kann** es technisch nicht mehr tun".
+3. **E2E-Verschlüsselung — live seit 26.06.2026**: User-Inhalte werden client-seitig verschlüsselt. Der Audit-Mechanismus ist damit weniger kritisch, weil **selbst ein Direct-SELECT nur Zeichensalat liefert** — die Selbstverpflichtung wandelt sich von "ich tue es nicht" zu "ich **kann** es technisch nicht mehr tun".
 
-Bis Stufe 3 erreicht ist, gilt diese Verpflichtung als **vertragliches Versprechen mit technischer Möglichkeit zur Verletzung** — wie in der Privacy Policy ([privacy-policy.de.md](privacy-policy.de.md)) transparent dokumentiert.
+Mit Stufe 3 (seit 26.06.2026) ist aus dem Versprechen eine **technische Tatsache** geworden — die Inhalte sind verschlüsselt, nicht nur „versprochen unangetastet". Wie in der Privacy Policy ([privacy-policy.de.md](privacy-policy.de.md)) dokumentiert.
 
 ---
 
