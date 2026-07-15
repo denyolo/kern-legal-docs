@@ -2,22 +2,22 @@
 
 **Stand: 27.05.2026**
 
-KERN ist eine App für innere Arbeit — und hier geht es in erster Linie um persönliche Dinge. Deshalb behandeln wir deine Daten so, wie wir selbst behandelt werden wollen: respektvoll.
+KERN ist eine App für innere Arbeit - und hier geht es in erster Linie um persönliche Dinge. Deshalb behandeln wir deine Daten so, wie wir selbst behandelt werden wollen: respektvoll.
 
 Diese Erklärung sagt dir in einfacher Sprache, was wir speichern, wo das landet, und was wir bewusst **nicht** tun.
 
 ---
 
-## Kurzfassung — du bist safe hier
+## Kurzfassung - du bist safe hier
 
 Bevor die Details kommen, hier in einfacher Sprache, was im Hintergrund passiert.
 
 - **Wir wissen nicht, wer du bist.** Kein Name, keine Email, keine Telefonnummer.
 - **Was du der KI schickst, geht anonym.** Anthropic (die Firma hinter der KI) bekommt den Text deiner Reflexion, aber keine Identität, die zu dir zurückführt.
 - **Deine Inhalte bleiben deine.** Kein Verkauf, kein KI-Training auf deinen Worten, keine Weitergabe an Dritte.
-- **Du wählst, wo deine Daten liegen.** Standard: nur auf deinem iPhone. Optional: **Ende-zu-Ende-verschlüsselt** als Backup auf EU-Servern — **nur dein Gerät kann sie lesen, wir nicht.**
-- **Kein Drittanbieter-Tracking, keine Werbe-Analytics, keine Cookies.** Auch Push-Notifications laufen komplett lokal auf deinem iPhone — kein Server schaut mit, auch nicht Apple.
-- **Anonyme Nutzungs-Metriken** (Anzahl Reflexionen, Durchschnitts-Dauer einer Meditation, Zeichen-Anzahl pro Antwort): Diese **Zahlen** sammeln wir, um KERN besser zu machen. **Keine Inhalte** — wir sehen nie, *was* du reflektierst. Details in [Abschnitt 5](#5-was-wir-anonym-messen-und-was-nicht).
+- **Du wählst, wo deine Daten liegen.** Standard: nur auf deinem iPhone. Optional: **Ende-zu-Ende-verschlüsselt** als Backup auf EU-Servern - **nur dein Gerät kann sie lesen, wir nicht.**
+- **Kein Drittanbieter-Tracking, keine Werbe-Analytics, keine Cookies.** Auch Push-Notifications laufen komplett lokal auf deinem iPhone - kein Server schaut mit, auch nicht Apple.
+- **Anonyme Nutzungs-Metriken** (Anzahl Reflexionen, Durchschnitts-Dauer einer Meditation, Zeichen-Anzahl pro Antwort): Diese **Zahlen** sammeln wir, um KERN besser zu machen. **Keine Inhalte** - wir sehen nie, *was* du reflektierst. Details in [Abschnitt 5](#5-was-wir-anonym-messen-und-was-nicht).
 - **Alles löschen geht jederzeit** mit einem Tap in den Einstellungen.
 
 Der Rest dieser Seite erklärt es im Detail, falls du tiefer schauen willst.
@@ -43,7 +43,7 @@ KERN funktioniert mit drei Ebenen von Daten:
 
 ### a) Was du in der App tust (lokal auf deinem Gerät)
 
-Diese Daten leben **immer** auf deinem iPhone — egal welche Backup-Wahl du triffst:
+Diese Daten leben **immer** auf deinem iPhone - egal welche Backup-Wahl du triffst:
 
 - Deine Onboarding-Antworten
 - Ziele und Blockaden, die du formulierst
@@ -54,13 +54,13 @@ Diese Daten leben **immer** auf deinem iPhone — egal welche Backup-Wahl du tri
 - Meditations-Sessions (Zeitpunkt, Dauer, Kategorie)
 - Einstellungen (Sprache, Stimme, Benachrichtigungen)
 
-**Du gibst uns dabei keine Identifikatoren** — keine Email, kein Name, keine Telefonnummer. Das Profil ist anonym auf deinem Gerät.
+**Du gibst uns dabei keine Identifikatoren** - keine Email, kein Name, keine Telefonnummer. Das Profil ist anonym auf deinem Gerät.
 
-### b) Was unsere Server auf jeden Fall sehen — auch ohne Cloud-Backup
+### b) Was unsere Server auf jeden Fall sehen - auch ohne Cloud-Backup
 
 Damit KERN überhaupt funktionieren kann (z.B. KI-Antworten generieren, Rate-Limits prüfen), brauchen wir eine technische Identität für dich. Beim ersten App-Start legt KERN deshalb automatisch eine **anonyme User-UUID** auf unseren Servern in Frankfurt an. Diese UUID:
 
-- Ist eine zufällige Zeichenkette — **kein Name, keine Email, keine Telefonnummer**
+- Ist eine zufällige Zeichenkette - **kein Name, keine Email, keine Telefonnummer**
 - Kann nicht zu dir als Person zurückverfolgt werden
 - Wird gebraucht, damit dein nächster Reflexions-Spiegel mit deinen früheren in derselben Konversation zusammenhängt
 
@@ -68,7 +68,7 @@ Damit KERN überhaupt funktionieren kann (z.B. KI-Antworten generieren, Rate-Lim
 
 Im Onboarding wählst du **zusätzlich**, ob KERN deine *Inhalte* (Reflexionen, Erkenntnisse, Vision, Verlauf) auf unseren Servern spiegelt. Diese Wahl kannst du **jederzeit** in den Einstellungen ändern.
 
-- **Cloud-Backup an**: Deine Inhalte werden **auf deinem iPhone verschlüsselt, bevor sie unsere Server erreichen** (Ende-zu-Ende, AES-256-GCM); zusätzlich ist die Übertragung TLS-gesichert. Auf den EU-Servern (Frankfurt, Deutschland) liegt damit **nur unlesbarer Chiffretext** — **selbst wir können deine gespeicherten Inhalte nicht lesen**, auch nicht im Notfall, auch wenn wir wollten. Der Schlüssel liegt ausschließlich in deinem **iCloud-Schlüsselbund** (Apple synct ihn Ende-zu-Ende zwischen deinen Geräten); KERN sieht ihn nie. **Eine bewusste Ausnahme**: Wenn du mit der KI reflektierst, geht dein Text einmalig im Klartext durch unseren Server zur KI — dort wird er **verarbeitet, aber nie gespeichert**. Recovery läuft über deinen iCloud-Schlüsselbund: solange der aktiv ist, kommst du auf einem neuen Gerät wieder an deine Inhalte. Ist er aus und dein Gerät weg, sind die verschlüsselten Inhalte nicht wiederherstellbar — das ist der Preis echter Vertraulichkeit.
+- **Cloud-Backup an**: Deine Inhalte werden **auf deinem iPhone verschlüsselt, bevor sie unsere Server erreichen** (Ende-zu-Ende, AES-256-GCM); zusätzlich ist die Übertragung TLS-gesichert. Auf den EU-Servern (Frankfurt, Deutschland) liegt damit **nur unlesbarer Chiffretext** - **selbst wir können deine gespeicherten Inhalte nicht lesen**, auch nicht im Notfall, auch wenn wir wollten. Der Schlüssel liegt ausschließlich in deinem **iCloud-Schlüsselbund** (Apple synct ihn Ende-zu-Ende zwischen deinen Geräten); KERN sieht ihn nie. **Eine bewusste Ausnahme**: Wenn du mit der KI reflektierst, geht dein Text einmalig im Klartext durch unseren Server zur KI - dort wird er **verarbeitet, aber nie gespeichert**. Recovery läuft über deinen iCloud-Schlüsselbund: solange der aktiv ist, kommst du auf einem neuen Gerät wieder an deine Inhalte. Ist er aus und dein Gerät weg, sind die verschlüsselten Inhalte nicht wiederherstellbar - das ist der Preis echter Vertraulichkeit.
 - **Nur auf diesem Gerät**: Deine *Inhalte* (Reflexionen, Erkenntnisse, Verlauf, Vision) verlassen dein iPhone nicht. Nur die anonyme User-UUID aus Abschnitt b) existiert weiter auf unseren Servern. Maximale Privatsphäre für deine Inhalte, aber kein Recovery wenn das Gerät weg ist.
 
 Bei aktivem Cloud-Backup verarbeiten wir zusätzlich:
@@ -78,7 +78,7 @@ Bei aktivem Cloud-Backup verarbeiten wir zusätzlich:
 
 ### d) AI-Antworten (wenn du eine Reflexion machst)
 
-Wenn KERN dir bei einer Reflexion antwortet oder eine Erkenntnis zusammenfasst, wird der **Text** deiner Reflexion an Anthropic (Hersteller des KI-Modells Claude) geschickt — **ohne deine Identität**. Anthropic erfährt nicht *wer* schreibt, nur *was*. Anthropic trainiert **nicht** auf deinen Inhalten (vertraglich ausgeschlossen) und speichert API-Inputs maximal 30 Tage als Operations-Log, danach Löschung. Die Übertragung läuft TLS-verschlüsselt. Mehr Details in Abschnitt 4.
+Wenn KERN dir bei einer Reflexion antwortet oder eine Erkenntnis zusammenfasst, wird der **Text** deiner Reflexion an Anthropic (Hersteller des KI-Modells Claude) geschickt - **ohne deine Identität**. Anthropic erfährt nicht *wer* schreibt, nur *was*. Anthropic trainiert **nicht** auf deinen Inhalten (vertraglich ausgeschlossen) und speichert API-Inputs maximal 30 Tage als Operations-Log, danach Löschung. Die Übertragung läuft TLS-verschlüsselt. Mehr Details in Abschnitt 4.
 
 ## 3. Wofür wir diese Daten nutzen
 
@@ -89,7 +89,7 @@ Wenn KERN dir bei einer Reflexion antwortet oder eine Erkenntnis zusammenfasst, 
 
 **Wir nutzen deine Daten nicht für Werbung. Wir verkaufen sie nicht. Wir trainieren keine KI auf deinen Inhalten.**
 
-Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung — du nutzt die App, wir liefern die Funktion) bzw. Art. 6 Abs. 1 lit. a DSGVO (deine Einwilligung für die Cloud-Wahl).
+Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung - du nutzt die App, wir liefern die Funktion) bzw. Art. 6 Abs. 1 lit. a DSGVO (deine Einwilligung für die Cloud-Wahl).
 
 ## 4. Wer bekommt deine Daten zu sehen?
 
@@ -113,29 +113,29 @@ Supabase ist immer aktiv (für deine anonyme UUID, siehe Abschnitt 2.b). Deine *
 - **Was Anthropic NICHT macht**: trainieren auf deinen Inhalten. Das ist im API-Vertrag vertraglich ausgeschlossen.
 - **Speicherdauer bei Anthropic**: 30 Tage Operations-Log, danach Löschung. Keine permanente Speicherung der API-Inputs.
 
-**Wenn dir der USA-Transfer trotz SCC zu unsicher ist, kannst du die App weiter benutzen, aber KI-Funktionen (Mirror, automatische Erkenntnis-Extraktion, Affirmations-Generierung) sind dann nicht verfügbar.** Wir bauen aktuell an einer Option, alle KI-Calls auch über EU-gehostete Modelle laufen zu lassen — Update folgt.
+**Wenn dir der USA-Transfer trotz SCC zu unsicher ist, kannst du die App weiter benutzen, aber KI-Funktionen (Mirror, automatische Erkenntnis-Extraktion, Affirmations-Generierung) sind dann nicht verfügbar.** Wir bauen aktuell an einer Option, alle KI-Calls auch über EU-gehostete Modelle laufen zu lassen - Update folgt.
 
 ### Apple (USA)
 
 Wenn du dich mit Apple Sign-In anmeldest, wickelt Apple den Login ab. Apple sieht dabei nur, dass du KERN benutzt, nicht **was** du eingibst. Details: [apple.com/legal/privacy](https://www.apple.com/legal/privacy/de-ww/).
 
-## 5. Was wir anonym messen — und was **nicht**
+## 5. Was wir anonym messen - und was **nicht**
 
-> 🔍 **Diese Aussagen sind auditierbar.** Schema, Code-of-Conduct und alle relevanten Datenbank-Migrationen liegen im öffentlichen Repo [kern-legal-docs](https://github.com/denyolo/kern-legal-docs) — mit voller Versions-Historie und Commit-Begründungen. Wenn etwas anders ist als hier beschrieben, kannst du das selbst sehen.
+> 🔍 **Diese Aussagen sind auditierbar.** Schema, Code-of-Conduct und alle relevanten Datenbank-Migrationen liegen im öffentlichen Repo [kern-legal-docs](https://github.com/denyolo/kern-legal-docs) - mit voller Versions-Historie und Commit-Begründungen. Wenn etwas anders ist als hier beschrieben, kannst du das selbst sehen.
 
 Damit du genau weißt was passiert:
 
 **Was wir an Zahlen messen** (anonym, ohne Inhalte):
 
 - Anzahl der Reflexionen, Affirmationen, Meditationen pro Tag/Monat (aggregiert)
-- Durchschnittliche Zeichen-Anzahl deiner Antworten (keine Texte — nur die Länge)
+- Durchschnittliche Zeichen-Anzahl deiner Antworten (keine Texte - nur die Länge)
 - Wann du eine Reflexion abbrichst (welcher Schritt, ohne Inhalt)
 - Welche Meditations-Kategorie wie oft gehört wird
 - Wie lange eine Onboarding-Session dauert
 - Wann ein Free-Limit erreicht wird
 - App-Engagement (wie lange du KERN nutzt pro Session)
 
-Diese Zahlen helfen uns die App zu verbessern (z.B. "ist der Zeichen-Cap zu eng?", "wo brechen User ab?"). Sie landen in einer separaten Datenbank-Tabelle `usage_events`, die per Design **keine Text-Spalten für Inhalte** hat. Deine User-ID wird vor dem Speichern mit einem geheimen Schlüssel **gehasht** — wir sehen also nicht "Anna hatte 5 Reflexionen", sondern "Hash-User-abc hatte 5 Reflexionen".
+Diese Zahlen helfen uns die App zu verbessern (z.B. "ist der Zeichen-Cap zu eng?", "wo brechen User ab?"). Sie landen in einer separaten Datenbank-Tabelle `usage_events`, die per Design **keine Text-Spalten für Inhalte** hat. Deine User-ID wird vor dem Speichern mit einem geheimen Schlüssel **gehasht** - wir sehen also nicht "Anna hatte 5 Reflexionen", sondern "Hash-User-abc hatte 5 Reflexionen".
 
 Schema einsehbar im öffentlichen Legal-Repo: [migrations/0005_usage_events.sql](https://github.com/denyolo/kern-legal-docs/blob/main/migrations/0005_usage_events.sql) (Repo: [kern-legal-docs](https://github.com/denyolo/kern-legal-docs))
 
@@ -152,7 +152,7 @@ Schema einsehbar im öffentlichen Legal-Repo: [migrations/0005_usage_events.sql]
 ## 6. Wie lange wir deine Daten speichern
 
 - **Lokal auf deinem Gerät**: solange du die App installiert hast. Beim Deinstallieren werden alle lokalen Daten gelöscht (iOS-Standard).
-- **In der Cloud (wenn aktiv)**: solange dein Account existiert. Du kannst in den Einstellungen jederzeit "Alle Daten löschen" wählen — dann gehen wir sowohl lokal als auch in der Cloud durch und entfernen alles.
+- **In der Cloud (wenn aktiv)**: solange dein Account existiert. Du kannst in den Einstellungen jederzeit "Alle Daten löschen" wählen - dann gehen wir sowohl lokal als auch in der Cloud durch und entfernen alles.
 - **AI-Verarbeitungs-Logs bei Anthropic**: max. 30 Tage.
 
 ## 7. Deine Rechte (DSGVO)
@@ -163,9 +163,9 @@ Du hast jederzeit das Recht auf:
 - **Berichtigung** falscher Daten (Art. 16)
 - **Löschung** ("Recht auf Vergessenwerden", Art. 17)
 - **Einschränkung der Verarbeitung** (Art. 18)
-- **Datenübertragbarkeit** (Art. 20) — wir geben dir auf Anfrage einen Export im JSON-Format
+- **Datenübertragbarkeit** (Art. 20) - wir geben dir auf Anfrage einen Export im JSON-Format
 - **Widerspruch** gegen die Verarbeitung (Art. 21)
-- **Widerruf** einer einmal erteilten Einwilligung (Art. 7 Abs. 3) — z.B. Cloud-Backup ausschalten, jederzeit
+- **Widerruf** einer einmal erteilten Einwilligung (Art. 7 Abs. 3) - z.B. Cloud-Backup ausschalten, jederzeit
 
 Für all das: schreib eine kurze Email an datenschutz@getkern.app. Wir antworten innerhalb von 30 Tagen. In den meisten Fällen viel schneller.
 
@@ -185,13 +185,13 @@ E-Mail: mailbox@datenschutz-berlin.de
 
 ## 9. Behörden-Anfragen
 
-Wir geben Daten an Behörden nur weiter, wenn wir rechtlich verpflichtet sind — also wenn ein deutsches Gericht oder eine zuständige deutsche Behörde uns nach gültigem Recht dazu zwingt. Wir geben dir in dem Fall Bescheid, soweit das gesetzlich erlaubt ist.
+Wir geben Daten an Behörden nur weiter, wenn wir rechtlich verpflichtet sind - also wenn ein deutsches Gericht oder eine zuständige deutsche Behörde uns nach gültigem Recht dazu zwingt. Wir geben dir in dem Fall Bescheid, soweit das gesetzlich erlaubt ist.
 
 Wir geben **keine** Daten an US-Behörden auf US-Anfragen weiter, weil unsere Daten in der EU liegen und wir nicht der US-Jurisdiktion unterliegen.
 
 ## 10. Push-Benachrichtigungen
 
-Wenn du Push-Notifications aktivierst (optional), laufen diese **komplett lokal auf deinem iPhone**. Inhalt und Zeitpunkt werden auf deinem Gerät entschieden — kein Server schaut mit, auch nicht Apple. Apple sieht weder dass du Notifications nutzt, noch wann oder mit welchem Inhalt.
+Wenn du Push-Notifications aktivierst (optional), laufen diese **komplett lokal auf deinem iPhone**. Inhalt und Zeitpunkt werden auf deinem Gerät entschieden - kein Server schaut mit, auch nicht Apple. Apple sieht weder dass du Notifications nutzt, noch wann oder mit welchem Inhalt.
 
 ## 11. Änderungen dieser Erklärung
 
@@ -205,5 +205,5 @@ Für formale Datenschutz-Anfragen: datenschutz@getkern.app
 
 ---
 
-*KERN — Reflektieren · Meditieren · Manifestieren.*
+*KERN - Reflektieren · Meditieren · Manifestieren.*
 *Deine inneren Bewegungen gehören dir.*

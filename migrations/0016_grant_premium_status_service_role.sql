@@ -1,0 +1,22 @@
+-- ════════════════════════════════════════════════════════════════════════════
+-- Migration 0016 — GRANT premium_status für service_role
+-- ════════════════════════════════════════════════════════════════════════════
+--
+-- 🚨 Tag-40-Muster (analog Migration 0013 usage_counters / 0011 usage_events):
+-- Der RevenueCat-Webhook (supabase/functions/revenuecat-webhook) SCHREIBT
+-- premium_status mit dem service_role-Client. Die mirror-Edge-Function LIEST es
+-- am Go-Live (nach BETA_ALL_PREMIUM=false) ebenfalls mit service_role.
+--
+-- service_role umgeht zwar RLS, braucht aber das TABLE-LEVEL GRANT (separate
+-- Postgres-Ebene). premium_status hatte bisher NUR `GRANT SELECT … TO
+-- authenticated` (0001) — KEIN service_role-Grant. Ohne ihn schlägt jeder
+-- Webhook-Write (und der Premium-READ der mirror-Function) still mit
+-- „permission denied for table premium_status [42501]" fehl → ein zahlender
+-- Kunde bekäme nie Premium. Fiel in der Beta nie auf, weil BETA_ALL_PREMIUM=true
+-- den premium_status-Read komplett umgeht.
+--
+-- Deploy (kern-prod hat leere remote schema_migrations-Historie → NICHT db push):
+--   supabase db query --linked --file supabase/migrations/0016_grant_premium_status_service_role.sql
+-- ════════════════════════════════════════════════════════════════════════════
+
+GRANT SELECT, INSERT, UPDATE ON public.premium_status TO service_role;
