@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated: October 1, 2026**
+**Last updated: October 9, 2026**
 
 KERN is an app for inner work - and this is first and foremost about personal things. So we handle your data the way we'd want ours handled: respectfully.
 
@@ -209,11 +209,15 @@ We do **not** disclose data to US authorities on US requests, because the data w
 
 If you enable push notifications (optional), they run **entirely locally on your iPhone**. Content and timing are decided on your device - no server watches along, not even Apple's. Apple sees neither that you use notifications, nor when, nor with what content.
 
-## 11. Changes to this policy
+## 11. Who KERN is for
+
+KERN is meant for adults aged 18 and over. If you are younger, please don't use KERN. We don't ask for your age, and we don't knowingly collect data from anyone under 18. You can delete an existing account at any time at the very bottom of the settings.
+
+## 12. Changes to this policy
 
 If processing changes, we update this page. The date at the top tells you when the policy was last changed.
 
-## 12. Contact
+## 13. Contact
 
 Questions? Concerns? Write us: hello@getkern.app
 

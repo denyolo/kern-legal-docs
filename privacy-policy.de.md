@@ -1,6 +1,6 @@
 # Datenschutz
 
-**Stand: 01.10.2026**
+**Stand: 09.10.2026**
 
 KERN ist eine App für innere Arbeit - und hier geht es in erster Linie um persönliche Dinge. Deshalb behandeln wir deine Daten so, wie wir selbst behandelt werden wollen: respektvoll.
 
@@ -209,11 +209,15 @@ Wir geben **keine** Daten an US-Behörden auf US-Anfragen weiter, weil die Daten
 
 Wenn du Push-Notifications aktivierst (optional), laufen diese **komplett lokal auf deinem iPhone**. Inhalt und Zeitpunkt werden auf deinem Gerät entschieden - kein Server schaut mit, auch nicht Apple. Apple sieht weder dass du Notifications nutzt, noch wann oder mit welchem Inhalt.
 
-## 11. Änderungen dieser Erklärung
+## 11. Für wen KERN gedacht ist
+
+KERN richtet sich an Erwachsene ab 18 Jahren. Bist du jünger, nutze KERN bitte nicht. Wir fragen kein Alter ab und erheben wissentlich keine Daten von Kindern und Jugendlichen. Ein bestehendes Konto kannst du jederzeit ganz unten in den Einstellungen löschen.
+
+## 12. Änderungen dieser Erklärung
 
 Wenn sich an der Verarbeitung etwas ändert, aktualisieren wir diese Seite. Das Datum ganz oben sagt dir, wann die Erklärung zuletzt geändert wurde.
 
-## 12. Kontakt
+## 13. Kontakt
 
 Fragen? Sorgen? Schreib uns: hello@getkern.app
 
