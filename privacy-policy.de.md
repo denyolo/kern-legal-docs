@@ -1,6 +1,6 @@
 # Datenschutz
 
-**Stand: 09.10.2026**
+**Stand: 27.10.2026**
 
 KERN ist eine App für innere Arbeit - und hier geht es in erster Linie um persönliche Dinge. Deshalb behandeln wir deine Daten so, wie wir selbst behandelt werden wollen: respektvoll.
 
@@ -168,7 +168,7 @@ Schema einsehbar im öffentlichen Legal-Repo: [migrations/0005_usage_events.sql]
 - **Lokal auf deinem Gerät**: solange du die App installiert hast. Beim Deinstallieren löscht iOS die App-Daten. Im Schlüsselbund deines iPhones bleiben dabei zwei kleine Einträge erhalten: deine Anmeldung (damit dein Konto nach einer Neuinstallation wieder da ist) und - falls du Cloud-Backup nutzt - dein Backup-Schlüssel in deinem iCloud-Schlüsselbund.
 - **In der Cloud (wenn aktiv)**: solange dein Konto existiert. Du kannst in den Einstellungen jederzeit "Konto löschen" wählen - dann löschen wir dein Konto mit allen Inhalten, lokal und in der Cloud, inklusive einer Apple-Verknüpfung und der dafür gespeicherten E-Mail-Adresse. Dein Backup-Schlüssel bleibt in deinem iCloud-Schlüsselbund, weil er für alle KERN-Konten deiner Apple-ID gilt; nach dem Löschen gibt es keine Daten mehr, die er entschlüsseln könnte.
 - **Pseudonymisierte Nutzungs-Metriken (Abschnitt 5)**: bleiben auch nach dem Löschen deines Kontos bestehen. Sie enthalten keine Inhalte und keine User-ID im Klartext. Weil dein Konto danach nicht mehr existiert, gibt es kein Konto mehr, dem wir sie zuordnen könnten.
-- **Kauf- und Abo-Daten bei RevenueCat und Apple**: nach den Bedingungen dieser Anbieter. "Konto löschen" in KERN löscht sie dort nicht automatisch mit.
+- **Kauf- und Abo-Daten bei RevenueCat und Apple**: Wenn du dein Konto löschst, lassen wir auch deinen Kunden-Eintrag bei RevenueCat (deine anonyme UUID mit Kaufhistorie) löschen. Kaufbelege und Abo bei Apple bleiben bei Apple, nach deren Bedingungen. Ein laufendes Abo kündigst du bitte vorher in den Einstellungen deines iPhones - das Löschen in KERN beendet es nicht.
 - **KI-Verarbeitungs-Logs bei Anthropic**: laut den Bedingungen des Anbieters in der Regel bis zu 30 Tage (Ausnahmen siehe Abschnitt 4).
 
 ## 7. Deine Rechte (DSGVO)

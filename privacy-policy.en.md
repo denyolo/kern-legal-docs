@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated: October 9, 2026**
+**Last updated: October 27, 2026**
 
 KERN is an app for inner work - and this is first and foremost about personal things. So we handle your data the way we'd want ours handled: respectfully.
 
@@ -168,7 +168,7 @@ Schema publicly visible in our Legal repo: [migrations/0005_usage_events.sql](ht
 - **Local on your device**: as long as you have the app installed. Uninstalling makes iOS delete the app data. Two small entries remain in your iPhone's keychain: your sign-in (so your account is back after reinstalling) and - if you use cloud backup - your backup key in your iCloud Keychain.
 - **In the cloud (if active)**: as long as your account exists. You can choose "Delete account" in settings anytime - we then delete your account with all content, locally and in the cloud, including an Apple link and the email address stored for it. Your backup key stays in your iCloud Keychain because it applies to all KERN accounts of your Apple ID; after deletion there is no data left that it could decrypt.
 - **Pseudonymized usage metrics (section 5)**: remain after you delete your account. They contain no content and no user ID in plain text. Because your account no longer exists afterwards, there is no account we could assign them to.
-- **Purchase and subscription data at RevenueCat and Apple**: according to these providers' terms. "Delete account" in KERN doesn't automatically delete it there.
+- **Purchase and subscription data at RevenueCat and Apple**: If you delete your account, we also have your customer record at RevenueCat (your anonymous UUID with purchase history) deleted. Receipts and subscriptions at Apple stay with Apple, under Apple's terms. If you have an active subscription, please cancel it first in your iPhone settings - deleting your account in KERN does not end it.
 - **AI processing logs at Anthropic**: according to the provider's terms, usually up to 30 days (exceptions see section 4).
 
 ## 7. Your rights (GDPR)
