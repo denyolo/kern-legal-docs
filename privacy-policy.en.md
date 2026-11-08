@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated: November 3, 2026**
+**Last updated: November 9, 2026**
 
 KERN is an app for inner work - and this is first and foremost about personal things. So we handle your data the way we'd want ours handled: respectfully.
 
@@ -20,7 +20,8 @@ Before the details, here's in plain language what happens in the background.
 - **You choose where your data lives.** The default is an **end-to-end encrypted** backup on EU servers - **only your device can read your content in it, not us.** Alternatively, your content stays only on your iPhone. You can switch in settings.
 - **No third-party tracking, no advertising analytics, no cookies.** Reminders are scheduled and shown by your iPhone itself, without a push server.
 - **Only numbers, never content.** How many reflections are created, how long meditations last, how long answers are: these numbers help us improve KERN. They are stored under an alias instead of your identifier (that's what "pseudonymized" means), and what you write is never part of them. Details in [section 5](#5-what-we-measure-pseudonymously---and-what-not).
-- **Delete your account anytime** in settings - with all your content, locally and in the cloud. Our daily database backups still contain it for up to 7 days afterwards.
+- **Reporting an AI reply is voluntary.** If you explicitly include the reply, we can read exactly this one reply, without your identifier. We delete it after 12 months, even if you delete your account before then (section 2.e).
+- **Delete your account anytime** in settings - with all your content, locally and in the cloud. Our daily database backups still contain it for up to 7 days afterwards. Reports about AI replies are not linked to any account; section 2.e applies to them.
 
 The rest of this page explains it in detail, if you want to look deeper.
 
@@ -89,7 +90,7 @@ Your content is **encrypted on your iPhone before it ever reaches our servers** 
 
 The key lives in your **iCloud Keychain** (Apple syncs it end-to-end across your devices) and otherwise only where you keep a copy yourself (under Einstellungen (Settings) → Sicherheit (Security) → Schlüssel sichern (Back up key)); KERN never sees it. You regain your content on a new device if your account is secured with Apple and your iCloud Keychain is on. If it's off and your device is gone, you also need a key you backed up yourself beforehand. Without it, the content cannot be recovered - that's the price of true confidentiality. Without securing it with Apple, a new device usually won't find your account, even if the key arrives there.
 
-**One deliberate exception**: when KERN answers you with the AI, the text needed for that and a short context from your previous entries (see section d) pass in cleartext (TLS-secured, but not end-to-end) through our server to the AI. **Our server only passes them on and doesn't store them**; at Anthropic, the retention periods from section 4 apply.
+**One deliberate exception**: when KERN answers you with the AI, the text needed for that and a short context from your previous entries (see section d) pass in cleartext (TLS-secured, but not end-to-end) through our server to the AI. **Our server only passes them on and doesn't store them**; at Anthropic, the retention periods from section 4 apply. **A second, voluntary exception**: if you report an AI reply and explicitly include it, we store exactly this reply readably, without your identifier (section e).
 
 Technical data stays readable, none of your texts. KERN needs it for counting, sorting and restoring:
 
@@ -109,17 +110,23 @@ Two technical details of the encryption: the approximate length of an encrypted 
 
 **Nur auf diesem Gerät (Only on this device)**
 
-From this choice on, your *content* is no longer backed up to the cloud. It then only leaves your iPhone in two cases: briefly when KERN answers you with the AI (section d), and when Apple converts your voice input to text on its servers (section 4). Maximum privacy for your content, but no recovery if you lose the device.
+From this choice on, your *content* is no longer backed up to the cloud. It then only leaves your iPhone in three cases: briefly when KERN answers you with the AI (section d), when Apple converts your voice input to text on its servers (section 4), and when you report an AI reply and explicitly include it (section e). Maximum privacy for your content, but no recovery if you lose the device.
 
 Whatever is already in the cloud is deleted there by KERN, provided it has checked that your entries are also on your iPhone. If you use KERN on several devices, the check doesn't catch every change that exists only on the other device. If you choose this in Einstellungen (Settings) and an entry from the cloud is missing on your iPhone, KERN asks you first; if deleting doesn't fully work, the backup stays on and KERN tells you. If you choose it during onboarding, KERN only deletes when the check is clear; otherwise (e.g. without a connection) your previous backup stays in the cloud, with its content encrypted. If you want to be sure nothing is left there, write to datenschutz@getkern.app with your identifier (under Einstellungen (Settings) → Sicherheit (Security) → Deine Kennung (Your identifier)) and we'll delete that backup. When switching to a different account (section b), KERN deletes whatever is still in the cloud under the earlier user UUID without this check.
 
-Afterwards our servers hold only the technical data from section b), the usage numbers from section 5 as well as the server logs and the records of our access from section 6; our daily database backups (section 6) still contain what was deleted for up to 7 days.
+Afterwards our servers hold only the technical data from section b), the usage numbers from section 5, your reports about AI replies (the reply itself only if you included it, without identifier, section e), as well as the server logs and the records of our access from section 6; our daily database backups (section 6) still contain what was deleted for up to 7 days.
 
 The choice applies only to this device: if you use the same account on another device with backup switched on, KERN keeps backing up your content from there, as described under "Cloud backup on".
 
 ### d) AI responses (when KERN answers you)
 
 When KERN answers you, for example in a reflection, for new perspectives, summaries, reviews or course texts, our server sends the text needed for that to Anthropic (the company behind the Claude AI model): the text in question, plus a short context from your previous entries (e.g. your answers from the start of the app, your "About you" summary, goals, life areas, blocks, your recent insights and excerpts from your recent reflections and thoughts), so the answer fits you. **No account identifier is sent** - Anthropic does not learn which account the request belongs to. According to the provider's terms, Anthropic does **not** train on this content and usually deletes it within 30 days. Transmission runs TLS-encrypted. All of this only happens with your permission: KERN asks you on each device beforehand, and without your agreement no text goes to Anthropic from there. More details in section 4.
+
+### e) When you report an AI reply
+
+If you find a reply from KERN hurtful, inappropriate, wrong or concerning, you can report it: in the conversation, the guided reflection or the opening conversation, press and hold the reply. We then store the reason you choose, which of these conversations it was in, the time, whether you use an iPhone or an Android device, and the app version. **The reply itself is only included if you switch on "Antwort mitschicken" (Include this reply).** Then we can read exactly this one reply. It may contain words from your conversation and things from your entries, because KERN replies with that context. KERN never includes your own messages.
+
+We store the report with Supabase (EU) without your identifier, and it is not linked to any account. Only our server logs record, as for every request, for up to 7 days which account it came from (section 6); we never combine the two. We use reports only to check and improve KERN's replies, and delete them after 12 months. The basis is your consent (Art. 6(1)(a) GDPR), which you give by sending the report. If you want to take a report back, email datenschutz@getkern.app roughly when it was and in which conversation. Because it carries no identifier, we find it that way and delete it. If several reports match, we delete all of them.
 
 ## 3. What we use this data for
 
@@ -129,6 +136,7 @@ When KERN answers you, for example in a reflection, for new perspectives, summar
 - To restore your account: after a reinstall via your iPhone's keychain (see section 6) and, if you secured it with Apple, also after signing out or on a new device
 - To handle purchases and your subscription status
 - To improve KERN with usage numbers that contain no content (see section 5)
+- To check reported AI replies and improve KERN's replies (see section 2.e)
 - To find errors, detect misuse and protect your data against loss (server logs and database backups, see section 6)
 - To be able to trace when and why we accessed an account or worked on it technically (records, see section 6)
 - To reply to you and handle your request when you write to us (see section 4)
@@ -136,9 +144,9 @@ When KERN answers you, for example in a reflection, for new perspectives, summar
 
 **We don't use your data for advertising. We don't sell it. We don't train AI on your content.**
 
-**In plain words:** What you write in KERN is encrypted in the cloud, and only you have the key. We can't read it there either. Otherwise your text only becomes readable for Anthropic when the AI answers you (our server only passes it on for that and doesn't store it, and Anthropic usually deletes it within 30 days), and for Apple when you dictate it. Neither gets a name, an email or an identifier from us. What we evaluate ourselves are numbers, never your content.
+**In plain words:** What you write in KERN is encrypted in the cloud, and only you have the key. We can't read it there either. Otherwise your text only becomes readable for Anthropic when the AI answers you (our server only passes it on for that and doesn't store it, and Anthropic usually deletes it within 30 days), and for Apple when you dictate it. Neither gets a name, an email or an identifier from us. What we evaluate ourselves are numbers, never your content. The only thing we can read is an AI reply you explicitly include when reporting it (section 2.e).
 
-Legal bases: What KERN needs for its functions (account, usage limits, subscription, cloud backup and restoring) and the replies to your requests, we process to fulfil the user agreement (Art. 6(1)(b) GDPR); cloud backup is a part of the function you can opt out of. AI responses are based on your consent (Art. 6(1)(a) GDPR), which KERN asks you for beforehand. Versions before 1.2.7 didn't ask yet; there, AI responses were part of the user agreement. The usage numbers from section 5 (only numbers, never content, under an alias instead of your identifier), server logs, database backups and the records of our access and repairs (section 6) are based on our legitimate interest in running KERN reliably and traceably and improving it (Art. 6(1)(f) GDPR). You can object to this at any time (section 7).
+Legal bases: What KERN needs for its functions (account, usage limits, subscription, cloud backup and restoring) and the replies to your requests, we process to fulfil the user agreement (Art. 6(1)(b) GDPR); cloud backup is a part of the function you can opt out of. AI responses are based on your consent (Art. 6(1)(a) GDPR), which KERN asks you for beforehand. A report about an AI reply is also based on your consent, which you give by sending it (section 2.e). Versions before 1.2.7 didn't ask yet; there, AI responses were part of the user agreement. The usage numbers from section 5 (only numbers, never content, under an alias instead of your identifier), server logs, database backups and the records of our access and repairs (section 6) are based on our legitimate interest in running KERN reliably and traceably and improving it (Art. 6(1)(f) GDPR). You can object to this at any time (section 7).
 
 ## 4. Who sees your data?
 
@@ -149,9 +157,9 @@ We work with three processors: Supabase, Anthropic and RevenueCat. These are the
 - **Processing location**: Frankfurt am Main, Germany (EU)
 - **Purpose**: Cloud backup of your data, sign-in + technical bridge to Anthropic (AI)
 - **Legal basis**: Data Processing Agreement per Art. 28 GDPR
-- **What they see**: Encrypted content + readable technical data (UUID, sign-in timestamps, IP addresses and user agent of your sign-ins, usage counters, subscription status and the data named in section 2.c), the usage numbers from section 5, the server logs, the database backups and the records of our access from section 6, as well as - if you secure your account with Apple - your email address and the sign-in identifier assigned by Apple
+- **What they see**: Encrypted content + readable technical data (UUID, sign-in timestamps, IP addresses and user agent of your sign-ins, usage counters, subscription status and the data named in section 2.c), the usage numbers from section 5, the reported AI replies from section 2.e (without identifier), the server logs, the database backups and the records of our access from section 6, as well as - if you secure your account with Apple - your email address and the sign-in identifier assigned by Apple
 
-Supabase is always active (for your user UUID, see section 2.b). Your **content** (reflections, insights, etc.) only goes to Supabase while cloud backup is on (the default, then encrypted) or when KERN is fetching an AI response for you.
+Supabase is always active (for your user UUID, see section 2.b). Your **content** (reflections, insights, etc.) only goes to Supabase while cloud backup is on (the default, then encrypted) or when KERN is fetching an AI response for you, and readable when you explicitly include an AI reply in a report (section 2.e).
 
 ### Anthropic (USA)
 
@@ -196,11 +204,11 @@ So you know exactly what happens:
 - When a free-tier limit is reached
 - App engagement (how long you use KERN per session)
 - Course progress, visits to the subscription page, whether the explainer video was watched, thumbs up/down for a meditation and whether you recommended KERN - each without your personal content
-- How right a perspective feels when you practice it (the value 1-10), whether you first explore KERN without a conversation, how many answers you give in the opening conversation and where it stops, how many life areas and blocks KERN recognizes there, which voice a meditation used, whether a summary failed, whether you saw or tapped the card for the next course, and whether you agreed to the AI permission or chose "Nicht jetzt" (Not now) - each without your personal content
+- How right a perspective feels when you practice it (the value 1-10), whether you first explore KERN without a conversation, how many answers you give in the opening conversation and where it stops, how many life areas and blocks KERN recognizes there, which voice a meditation used, whether a summary failed, whether you saw or tapped the card for the next course, whether the window asking for the AI permission appeared, and whether you agreed or chose "Nicht jetzt" (Not now) - each without your personal content
 
-These numbers help us improve the app (e.g., "is the character cap too tight?", "where do users drop off?"). They land in a separate database table `usage_events` that by design has **no text columns for content** - only event type, time, category, numbers and a session identifier that is randomly generated anew each time you open the app. Your user ID is **hashed** together with a secret key before saving - we see "Hash-User-abc had 5 reflections", not "Anna had 5 reflections". This is **pseudonymization**, not anonymization: the entries are stored under a pseudonym, that is, an alias, instead of your user ID, but with the secret key it would technically be possible to check which user ID an entry belongs to. We never do that with content and only in four cases: when you ask us to, when we repair a technically split account, for totals across all subscriptions, and when we are legally required to (section 9). If you ask, e.g. for access or an objection (section 7), we only look up your own entries. For a repair, we match the entries to individual accounts. The totals show what leads to a purchase (e.g. how many buyers completed a course beforehand) - for that, we never look at a single person. The numbers are collected regardless of your backup choice.
+These numbers help us improve the app (e.g., "is the character cap too tight?", "where do users drop off?"). They land in a separate database table `usage_events` that by design has **no text columns for content** - only event type, time, category, numbers, a session identifier that is randomly generated anew each time you open the app, and since version 1.3.0 the platform (iPhone or Android) and the app version. Your user ID is **hashed** together with a secret key before saving - we see "Hash-User-abc had 5 reflections", not "Anna had 5 reflections". This is **pseudonymization**, not anonymization: the entries are stored under a pseudonym, that is, an alias, instead of your user ID, but with the secret key it would technically be possible to check which user ID an entry belongs to. We never do that with content and only in four cases: when you ask us to, when we repair a technically split account, for totals across all subscriptions, and when we are legally required to (section 9). If you ask, e.g. for access or an objection (section 7), we only look up your own entries. For a repair, we match the entries to individual accounts. The totals show what leads to a purchase (e.g. how many buyers completed a course beforehand) - for that, we never look at a single person. The numbers are collected regardless of your backup choice.
 
-Schema publicly visible in our Legal repo: [migrations/0005_usage_events.sql](https://github.com/denyolo/kern-legal-docs/blob/main/migrations/0005_usage_events.sql) and [migrations/0006_telemetry_hash_fix.sql](https://github.com/denyolo/kern-legal-docs/blob/main/migrations/0006_telemetry_hash_fix.sql) (Repo: [kern-legal-docs](https://github.com/denyolo/kern-legal-docs))
+Schema publicly visible in our Legal repo: [migrations/0005_usage_events.sql](https://github.com/denyolo/kern-legal-docs/blob/main/migrations/0005_usage_events.sql), [migrations/0006_telemetry_hash_fix.sql](https://github.com/denyolo/kern-legal-docs/blob/main/migrations/0006_telemetry_hash_fix.sql) and [migrations/0037_usage_events_platform_version.sql](https://github.com/denyolo/kern-legal-docs/blob/main/migrations/0037_usage_events_platform_version.sql) (Repo: [kern-legal-docs](https://github.com/denyolo/kern-legal-docs)). The table for reported AI replies: [migrations/0038_ai_reports.sql](https://github.com/denyolo/kern-legal-docs/blob/main/migrations/0038_ai_reports.sql).
 
 **What we deliberately don't do**:
 
@@ -208,7 +216,7 @@ Schema publicly visible in our Legal repo: [migrations/0005_usage_events.sql](ht
 - We use **no** advertising SDKs (no Facebook Pixel, no AppsFlyer, no AdMob)
 - We use **no** cookies in the app
 - We use **no** tracking pixels
-- We **never** read the content of your reflections, perspectives, thoughts, or goals
+- We **never** read the content of your reflections, perspectives, thoughts, or goals. The only thing readable for us is an AI reply you explicitly include when reporting it (section 2.e)
 - We don't sell your data to anyone, ever
 - We don't pass your data to authorities unless we are legally required to (see section 9)
 
@@ -216,6 +224,7 @@ Schema publicly visible in our Legal repo: [migrations/0005_usage_events.sql](ht
 
 - **Local on your device**: as long as you have the app installed. Uninstalling makes iOS delete the app data. Two small entries remain in your iPhone's keychain: your sign-in (so your account is back after reinstalling) and - once KERN has encrypted anything for the cloud, which can happen even before your backup choice - your backup key in your iCloud Keychain. It stays even if you later choose "Nur auf diesem Gerät" (Only on this device).
 - **In the cloud (if active)**: as long as your account exists. An anonymous account (not secured with Apple) that hasn't been used for 24 months and has neither a running subscription nor an unlock is deleted, along with its entries in the cloud and the data about its sign-ins. If you choose "Konto löschen" (Delete account) at the very bottom of Einstellungen (Settings), we delete your account with all content, on your iPhone and in the cloud: your entries, your usage counters, your subscription status with us, the data about your sign-ins and - if present - the Apple link with the email address stored for it. If the cleanup of an earlier automatic identifier is still running, KERN takes it along, unless a subscription or unlock is still running under it (section 2.b). If this cleanup doesn't work right away, for example without a connection, KERN tries again the next time you open the app. Our daily database backups and server logs still contain what was deleted for up to 7 days (see below). Your backup key stays in your iCloud Keychain because it applies to all KERN accounts of your Apple ID. Anything of your deleted account that it could decrypt then remains with us only in these backups and logs, and after 7 days at the latest not even there.
+- **Reported AI replies (section 2.e)**: 12 months, after which the database deletes them automatically. Because a report is not linked to any account, it remains until then even after you delete your account. On request, we find it by the time and delete it earlier.
 - **Usage numbers (section 5)**: remain after you delete your account. They contain no content and no user ID in plain text. Because your account no longer exists afterwards, there is no account we could assign them to.
 - **Purchase and subscription data at RevenueCat and Apple**: If you delete your account, we also have your customer record at RevenueCat (your user UUID with purchase history) deleted. One exception for an earlier automatic identifier is in section 2.b. If you're still signed in on a second device, the app on that device can recreate your customer record at RevenueCat under your user UUID; we clean up such leftovers regularly. Receipts and subscriptions at Apple stay with Apple, under Apple's terms. If you have an active subscription, please cancel it first in your iPhone settings - deleting your account in KERN does not end it.
 - **Database backups**: So that nothing is lost after a serious technical failure, our database provider Supabase creates a backup of the whole database every day and keeps it for 7 days. A backup is a copy of the database: whatever is encrypted there is also encrypted in the backup. Whatever you delete therefore remains in these backups for up to 7 days and then disappears on its own. A backup is only restored in such an emergency.
@@ -239,7 +248,7 @@ For all of these: send a short email to datenschutz@getkern.app. We respond with
 
 **Inside the app:**
 
-- "Konto löschen" (Delete account) is at the very bottom of Einstellungen (Settings). After a confirmation, it deletes your account with all content, locally and (if active) in the cloud, including an Apple link.
+- "Konto löschen" (Delete account) is at the very bottom of Einstellungen (Settings). After a confirmation, it deletes your account with all content, locally and (if active) in the cloud, including an Apple link. Reports about AI replies are not linked to any account; we delete them on request (section 2.e).
 - Change your cloud preference in Einstellungen (Settings) → App-Einstellungen (App settings) → Daten & Privatsphäre (Data & privacy).
 - Withdraw your permission for the AI in the same place under KI-Antworten (AI replies). It applies to each device.
 

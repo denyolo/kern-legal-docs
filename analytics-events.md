@@ -1,6 +1,6 @@
 # KERN - Pseudonymisierte Nutzungs-Metriken (Schema)
 
-**Stand:** 03.11.2026
+**Stand:** 09.11.2026
 **Geltungsbereich:** seit der Beta-Phase (Mai 2026) und darüber hinaus
 
 ---
@@ -23,7 +23,7 @@ Alle Metriken landen in **einer separaten Tabelle** namens `usage_events` (Supab
 
 Schema (öffentlich im KERN-Repo einsehbar):
 - [`migrations/0005_usage_events.sql`](https://github.com/denyolo/kern-legal-docs/blob/main/migrations/0005_usage_events.sql) (im öffentlichen [kern-legal-docs](https://github.com/denyolo/kern-legal-docs) Repo)
-- Die erlaubten Event-Typen stehen in der jeweils neuesten Migration mit `chk_event_type` (Stand: [`migrations/0035_event_type_ai_consent.sql`](https://github.com/denyolo/kern-legal-docs/blob/main/migrations/0035_event_type_ai_consent.sql), 30 Typen)
+- Die erlaubten Event-Typen stehen in der jeweils neuesten Migration mit `chk_event_type` (Stand: [`migrations/0037_usage_events_platform_version.sql`](https://github.com/denyolo/kern-legal-docs/blob/main/migrations/0037_usage_events_platform_version.sql), 31 Typen). Dieselbe Migration bringt die Spalten `platform` und `app_version`.
 
 **Spalten:**
 
@@ -36,10 +36,13 @@ Schema (öffentlich im KERN-Repo einsehbar):
 | `category` | Text (max 64 Zeichen) | z.B. `bodyscan`, `free`, `monthly` | freie User-Eingaben |
 | `numeric_1` / `_2` / `_3` | Integer | Zahlen (Zeichen-Anzahl, Sekunden, Counts) | - |
 | `session_token` | Text (max 64 Zeichen) | zufällige Kennung, neu bei jeder Rückkehr in die App | User-Identifikation |
+| `platform` | Text (nur `ios` oder `android`) | auf welcher Plattform die App lief, seit Version 1.3.0 (ältere Einträge: leer) | Gerätemodell, Geräte-Kennung |
+| `app_version` | Text (max 32 Zeichen) | Version und Build der App, z.B. `1.3.0 (351)`, seit Version 1.3.0 | - |
 
 **Hard-Constraints in der Datenbank:**
 - `event_type` MUSS einer der erlaubten Typen sein (Postgres-CHECK)
 - `category` und `session_token` sind auf max 64 Zeichen begrenzt (verhindert, dass jemand versucht, Inhalte reinzuschmuggeln)
+- `platform` nimmt nur `ios` oder `android` an, `app_version` höchstens 32 Zeichen; alles andere speichert die Datenbank als leer
 - Niemand außer dem Owner-Konto kann die Tabelle direkt lesen (RLS-Locked)
 
 ---
@@ -119,6 +122,7 @@ Alle streng ohne Inhalte, nur Enums und Zahlen.
 | `explainer_started` / `explainer_ended` / `explainer_cta` | Erklärvideo gestartet, beendet, Knopf am Ende | Herkunft; beim Ende zusätzlich, wie es endete (zu Ende geschaut, übersprungen, geschlossen, Fehler) und die geschauten Sekunden; beim Knopf, welcher Knopf |
 | `share_opened` | Das Weiterempfehlen-Fenster wurde geöffnet | `category`: Ort, `numeric_1`: 1 = wirklich geteilt |
 | `ai_consent` | Die Frage nach der Erlaubnis für die KI wurde beantwortet | `category`: wo gefragt wurde, `numeric_1`: 1 = Einverstanden, 0 = Nicht jetzt |
+| `ai_consent_shown` | Das Fenster mit der Frage nach der Erlaubnis für die KI ist erschienen (seit 1.3.0) | `category`: wo gefragt wurde |
 | `next_course_card_viewed` / `next_course_card_tapped` | Die Karte zum nächsten Kurs wurde gesehen oder angetippt | `category`: nächster Kurs, `numeric_1`: Tage seit Abschluss von Kurs 1; beim Antippen zusätzlich `numeric_2`: ob die Angebotszeile sichtbar war |
 
 ---
@@ -216,3 +220,4 @@ Möchtest du KERN nicht mehr nutzen, kannst du dein Konto ganz unten in den Eins
 
 - **20.05.2026** - Initial. `usage_events`-Tabelle eingeführt mit 8 Event-Typen.
 - **03.11.2026** - Stand nachgezogen: 30 Event-Typen (zuletzt neu: `ai_consent`, Migration 0035), Pseudonymisierung statt „anonym“, die vier eng begrenzten Ausnahmen (Kauf-Auswertung als Summe, Konto-Reparatur, auf Wunsch der Person, rechtliche Pflicht), Konto-Löschen ehrlich beschrieben, `reflection_aborted`, `meditation_completed` und die Onboarding-Felder genauer beschrieben.
+- **(1.3.0, 09.11.2026)** - Spalten `platform` und `app_version` (Migration 0037, ältere Einträge bleiben leer) und das Ereignis `ai_consent_shown` (31 Typen). Gemeldete KI-Antworten liegen nicht hier, sondern ohne Kennung in einer eigenen Tabelle `ai_reports` (Migration 0038, Datenschutzerklärung Abschnitt 2.e).

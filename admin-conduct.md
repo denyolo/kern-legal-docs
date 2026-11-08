@@ -1,11 +1,11 @@
 # KERN - Admin Code of Conduct
 
-**Stand: 03.11.2026**
+**Stand: 09.11.2026**
 **Gilt für: Dennis Lisk und alle künftigen KERN-Team-Mitglieder mit technischem Datenzugriff**
 
 ---
 
-**Seit dem 26.06.2026 sind die User-Inhalte (Reflexionen, Erkenntnisse, Onboarding-Antworten, Ziele, Sichtweisen, Verlauf) Ende-zu-Ende verschlüsselt gespeichert - in der Datenbank und in ihren Sicherungen kann ich sie nicht mehr lesen, niemand bei KERN kann das.** Bei Blockaden berechnet die App die Kennung eines Eintrags seit Version 1.2.7 aus seinem Text und dem Schlüssel des Users. Ältere Einträge, die die App noch nicht umgestellt hat, hängen nur am Text; einen erratenen Wortlaut könnte ich damit prüfen, und auch das tue ich nicht (Abschnitt 1). Eine bewusste Ausnahme ist der Weg zur KI: Wenn KERN mit der KI antwortet, reicht unser Server den dafür nötigen Text samt einem kurzen Kontext aus den bisherigen Einträgen im Klartext (TLS-gesichert, aber nicht Ende-zu-Ende) an Anthropic weiter, ohne ihn zu speichern oder zu protokollieren. Hier bleibt es bei meiner Selbstverpflichtung aus Abschnitt 1. Die folgenden Verpflichtungen waren schon vor der Verschlüsselung mein Standard und bleiben es.
+**Seit dem 26.06.2026 sind die User-Inhalte (Reflexionen, Erkenntnisse, Onboarding-Antworten, Ziele, Sichtweisen, Verlauf) Ende-zu-Ende verschlüsselt gespeichert - in der Datenbank und in ihren Sicherungen kann ich sie nicht mehr lesen, niemand bei KERN kann das.** Bei Blockaden berechnet die App die Kennung eines Eintrags seit Version 1.2.7 aus seinem Text und dem Schlüssel des Users. Ältere Einträge, die die App noch nicht umgestellt hat, hängen nur am Text; einen erratenen Wortlaut könnte ich damit prüfen, und auch das tue ich nicht (Abschnitt 1). Eine bewusste Ausnahme ist der Weg zur KI: Wenn KERN mit der KI antwortet, reicht unser Server den dafür nötigen Text samt einem kurzen Kontext aus den bisherigen Einträgen im Klartext (TLS-gesichert, aber nicht Ende-zu-Ende) an Anthropic weiter, ohne ihn zu speichern oder zu protokollieren. Hier bleibt es bei meiner Selbstverpflichtung aus Abschnitt 1. Eine zweite Ausnahme gibt es seit Version 1.3.0: Wer eine KI-Antwort meldet und dabei ausdrücklich „Antwort mitschicken“ einschaltet, schickt uns genau diese eine Antwort lesbar, ohne Kennung (Abschnitt 2, letzter Absatz). Die folgenden Verpflichtungen waren schon vor der Verschlüsselung mein Standard und bleiben es.
 
 Ich verpflichte mich:
 
@@ -29,9 +29,11 @@ c) **Löschen, Reparieren und Datenminimierung ohne Lesen** - wenn Daten gelösc
 - Ganze Konten lösche ich auf diesem Weg nur auf Wunsch der Person oder wenn KERN es bei einem Konto-Wechsel aufgeräumt hat, es nur wegen eines Abos oder einer Freischaltung stehen blieb und beides nicht mehr aktiv ist, oder wenn ein anonymes Konto 24 Monate lang nicht genutzt wurde und kein Abo und keine Freischaltung trägt; sonst entferne ich nur die betroffenen Einträge.
 - Jeder Lauf wird protokolliert: Datum, Zweck, Umfang (wie viele Konten und Einträge) und Freigabe; bei Arbeiten an einzelnen Konten auch deren Kennungen, bei einer Reparatur zusätzlich die Kennungen der umgehängten Einträge, damit sich der Lauf rückgängig machen lässt. Bei Kunden-Resten bei RevenueCat, deren Konto es bei KERN schon nicht mehr gibt, halte ich nur die Zahlen fest. Das Protokoll enthält keine Inhalte, liegt nicht im öffentlichen Repo und bleibt auch bestehen, wenn ein betroffenes Konto später gelöscht wird.
 
+**Gemeldete KI-Antworten (seit Version 1.3.0, Tabelle `ai_reports`):** Sie sind mit keinem Konto verknüpft. Den Text einer KI-Antwort gibt es dort nur, wenn die Person ihn beim Melden ausdrücklich mitgeschickt hat. Diese Texte lese ich nur, um KERNs Antworten zu prüfen und zu verbessern, und ich versuche von mir aus nie, eine Meldung einem Konto oder einer Person zuzuordnen, auch nicht über Server-Protokolle. Bittet jemand darum, suche ich die Meldung nur über den ungefähren Zeitpunkt und das Gespräch heraus, ohne dafür die Texte zu lesen, und lösche alle, die in Frage kommen. Nach 12 Monaten löscht die Datenbank Meldungen von selbst.
+
 ## 3. Audit-Trail muss bestehen
 
-**Operative Regel:** Jeder Zugriff auf User-Inhalte erfolgt ausschließlich über die SQL-Funktion `admin_inspect_user_data(target_user_id, reason)`. Sie schreibt einen Audit-Eintrag in die Tabelle `admin_access_log` und liefert die Einträge aus den Tabellen `profiles`, `reflections`, `insights`, `sessions`, `affirmations`, `goals`, `life_areas` und `blockade_meta` zurück. Die Tabellen `affirmation_practice_events`, `meditation_ratings`, `conversation_history` und `summaries` deckt sie bisher nicht ab. Bräuchte ich dort einmal Inhalte (nur nach Abschnitt 2a oder 2b), erweitere ich vorher die Funktion, damit auch dieser Zugriff protokolliert wird.
+**Operative Regel:** Jeder Zugriff auf User-Inhalte erfolgt ausschließlich über die SQL-Funktion `admin_inspect_user_data(target_user_id, reason)`. Sie schreibt einen Audit-Eintrag in die Tabelle `admin_access_log` und liefert die Einträge aus den Tabellen `profiles`, `reflections`, `insights`, `sessions`, `affirmations`, `goals`, `life_areas` und `blockade_meta` zurück. Die Tabellen `affirmation_practice_events`, `meditation_ratings`, `conversation_history` und `summaries` deckt sie bisher nicht ab. Bräuchte ich dort einmal Inhalte (nur nach Abschnitt 2a oder 2b), erweitere ich vorher die Funktion, damit auch dieser Zugriff protokolliert wird. Ausgenommen ist die Tabelle `ai_reports` (gemeldete KI-Antworten, Abschnitt 2, letzter Absatz): Sie hängt an keinem Konto, die Funktion passt dafür nicht. Diese Meldungen lese ich direkt, nur zu dem dort genannten Zweck.
 
 **Aufruf-Beispiel** (im Supabase SQL Editor):
 
@@ -77,9 +79,9 @@ Diese Verpflichtung wird durch technische Maßnahmen schrittweise verstärkt:
 
 1. **Seit Mai 2026**: Schriftliche Selbstverpflichtung (dieses Dokument) + `admin_inspect_user_data`-Funktion + `admin_access_log`-Tabelle. **Honor System** - direkter SELECT ist technisch möglich, aber durch diese Regel ausgeschlossen.
 2. **Offen**: `pgaudit` als technische zweite Verteidigungslinie. Dann wird auch ein direkter SELECT protokolliert. Bisher nicht eingeschaltet (siehe Abschnitt 3).
-3. **E2E-Verschlüsselung - live seit 26.06.2026**: User-Inhalte werden client-seitig verschlüsselt. Der Audit-Mechanismus ist damit weniger kritisch, weil **selbst ein Direct-SELECT für Inhalte nur Chiffretext liefert** - für die gespeicherten Inhalte wandelt sich die Selbstverpflichtung von „ich tue es nicht“ zu „ich **kann** es technisch nicht mehr tun“.
+3. **E2E-Verschlüsselung - live seit 26.06.2026**: User-Inhalte werden client-seitig verschlüsselt. Der Audit-Mechanismus ist damit weniger kritisch, weil **selbst ein Direct-SELECT für Inhalte nur Chiffretext liefert** - für die gespeicherten Inhalte wandelt sich die Selbstverpflichtung von „ich tue es nicht“ zu „ich **kann** es technisch nicht mehr tun“. Ausgenommen sind nur KI-Antworten, die jemand beim Melden ausdrücklich mitschickt (Abschnitt 2).
 
-Mit Stufe 3 (seit 26.06.2026) ist aus dem Versprechen für die gespeicherten Inhalte eine **technische Tatsache** geworden - sie sind verschlüsselt, nicht nur „versprochen unangetastet“. Für den Weg zur KI bleibt es beim Versprechen aus der Einleitung. Wie in der Privacy Policy ([privacy-policy.de.md](privacy-policy.de.md)) dokumentiert.
+Mit Stufe 3 (seit 26.06.2026) ist aus dem Versprechen für die gespeicherten Inhalte eine **technische Tatsache** geworden - sie sind verschlüsselt, nicht nur „versprochen unangetastet“. Für den Weg zur KI und für gemeldete KI-Antworten, die jemand mitschickt, bleibt es beim Versprechen aus der Einleitung und Abschnitt 2. Wie in der Privacy Policy ([privacy-policy.de.md](privacy-policy.de.md)) dokumentiert.
 
 ---
 
@@ -101,3 +103,4 @@ Wenn ich gegen diese Verpflichtung verstoße, bin ich nicht nur unzuverlässig -
 **Signatur (durch Commit):**
 - Dennis Lisk, Owner KERN - initial Commit, 18.05.2026
 - Ergänzung 03.11.2026: Ausnahme 2c (Löschen, Reparieren und Datenminimierung ohne Lesen), Weg zur KI, ehrlicher Stand zu `pgaudit` und zur Audit-Funktion, aktuelle Begriffe
+- Ergänzung (1.3.0, 09.11.2026): gemeldete KI-Antworten (Einleitung, Abschnitt 2 letzter Absatz, Abschnitt 3 operative Regel, Abschnitt 6 Punkt 3 und der Absatz danach)
