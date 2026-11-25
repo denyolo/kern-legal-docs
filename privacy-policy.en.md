@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated: November 12, 2026**
+**Last updated: November 25, 2026**
 
 KERN is an app for inner work - and this is first and foremost about personal things. So we handle your data the way we'd want ours handled: respectfully.
 
@@ -107,6 +107,8 @@ Technical data stays readable, none of your texts. KERN needs it for counting, s
 - The totals of your journey
 
 Two technical details of the encryption: the approximate length of an encrypted text can be read from the ciphertext, its content cannot. And since version 1.2.7, KERN calculates the identifier a block is stored under in the cloud on your device from its text and your key. Without the key it reveals nothing about the text. KERN converts older entries as soon as you use the new version with the backup switched on. Until then their identifier is calculated from the text alone: the text can't be calculated back from it; but anyone with access to the database, including us, could check whether a guessed wording matches, which is easier for short names such as a single word than for long ones. We don't do that.
+
+So that everything in your account stays secured with one key, KERN also stores a small encrypted check mark there. It contains nothing about you and can only be opened with your key. It lets a device tell whether its key matches your account.
 
 **Nur auf diesem Gerät (Only on this device)**
 

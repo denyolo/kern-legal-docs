@@ -1,6 +1,6 @@
 # Datenschutz
 
-**Stand: 12.11.2026**
+**Stand: 25.11.2026**
 
 KERN ist eine App für innere Arbeit - und hier geht es in erster Linie um persönliche Dinge. Deshalb behandeln wir deine Daten so, wie wir selbst behandelt werden wollen: respektvoll.
 
@@ -105,6 +105,8 @@ Lesbar bleiben technische Angaben, keine deiner Texte. KERN braucht sie zum Zäh
 - Die Gesamtzahlen deiner Reise
 
 Zwei technische Eigenheiten der Verschlüsselung: Wie lang ein verschlüsselter Text ungefähr ist, lässt sich an der Chiffre ablesen, sein Inhalt nicht. Und die Kennung, unter der eine Blockade in der Cloud liegt, berechnet KERN seit Version 1.2.7 auf deinem Gerät aus ihrem Text und deinem Schlüssel. Ohne den Schlüssel verrät sie nichts über den Text. Ältere Einträge stellt KERN um, sobald du die neue Version mit eingeschaltetem Backup nutzt. Bis dahin ist ihre Kennung nur aus dem Text berechnet: Zurückrechnen lässt er sich daraus nicht; wer Zugriff auf die Datenbank hat, also auch wir, könnte aber prüfen, ob ein erratener Wortlaut stimmt, bei kurzen Namen wie einem einzelnen Wort leichter als bei langen. Das tun wir nicht.
+
+Damit in deinem Konto alles mit einem Schlüssel gesichert bleibt, legt KERN dort außerdem eine kleine verschlüsselte Prüfmarke ab. Sie enthält nichts von dir und lässt sich nur mit deinem Schlüssel öffnen. Daran erkennt ein Gerät, ob sein Schlüssel zu deinem Konto passt.
 
 **Nur auf diesem Gerät**
 
